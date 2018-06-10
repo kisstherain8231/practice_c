@@ -21,7 +21,6 @@ typedef struct List Node;
 typedef Node * Link;
 
 
-
 int main () 
 {
     Link New;
