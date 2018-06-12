@@ -9,9 +9,9 @@ struct tree
 };
 
 typedef struct tree treenode;
-typedef treenode *  b_tree;
+typedef treenode * b_tree;
 
-b_tree * insert_node(b_tree root, int node)
+b_tree  insert_node(b_tree root, int node)
 {
     b_tree newnode;
     b_tree currentnode;
@@ -20,7 +20,7 @@ b_tree * insert_node(b_tree root, int node)
     newnode = (b_tree)malloc(sizeof(treenode));
 
     newnode->data = node;
-    newnode->right = NULL:
+    newnode->right = NULL;
     newnode->left= NULL;
 
     if (root == NULL)
@@ -68,7 +68,7 @@ b_tree create_btree(int * data, int len)
 
     for (i = 0; i < len; i++)
     {
-        root = insert_node(root， data[i]);
+        root = insert_node(root, data[i]);
     }
 
     return root;
@@ -82,7 +82,7 @@ void print_bree(b_tree root)
     pointer = root->left;
     printf("Print  left_subtree node of root:\n");
 
-    while(pointer != NULL)
+    while (pointer != NULL)
     {
         printf("[%2d]\n", pointer->data);
         pointer = pointer->left;
@@ -91,7 +91,7 @@ void print_bree(b_tree root)
     pointer = root->right;
     printf("Print  right_subtree node of root:\n");
 
-    while(pointer->right != NULL)
+    while (pointer != NULL)
     {
         printf("[%2d]\n", pointer->data);
         pointer = pointer->right;
@@ -113,7 +113,7 @@ int main ()
 
     scanf("%d", &value);
 
-    while (data != 0)
+    while (value != 0)
     {
         nodelist[index] = value;
         index = index + 1;
