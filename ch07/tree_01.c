@@ -29,7 +29,7 @@ void  create_btree(int * b_tree, int *nodelist, int len)
 }
 
 
-int main () 
+int main() 
 {
     int i, index;
     int data;
@@ -61,4 +61,6 @@ int main ()
     {
         printf("%2d :  [%d]\n", i, b_tree[i]);
     }
+    
+    
 }
